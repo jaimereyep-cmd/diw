@@ -1,0 +1,38 @@
+// _cabecera.scss — 👀 EJEMPLO RESUELTO. Léelo antes de empezar: los tuyos se parecen.
+//
+//   Móvil (lo primero, sin media query): logo arriba y enlaces debajo, en una fila que se parte.
+//   Desde $bp-md: logo a la izquierda y enlaces a la derecha, en la misma línea.
+@use '../tokens' as *;
+@use '../mixins' as *;
+
+.cabecera {
+  display: flex;
+  flex-direction: column;          // eje principal vertical: logo encima de la nav
+  gap: $space-sm;
+  padding: $space-md;
+  background: $color-brand-strong;
+
+  @include desde($bp-md) {         // SASS saca esto fuera como @media (min-width: 600px)
+    flex-direction: row;           // ahora el eje principal es horizontal…
+    justify-content: space-between;  // …y el espacio que sobra va ENTRE logo y nav
+    align-items: center;           // eje cruzado: centrados en vertical
+  }
+}
+
+.cabecera__logo {
+  color: $white;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+}
+
+.cabecera__nav {
+  display: flex;
+  flex-wrap: wrap;                 // si no caben, bajan a otra línea (nada de scroll horizontal)
+  gap: $space-md;
+
+  a {
+    color: $white;
+  }
+}

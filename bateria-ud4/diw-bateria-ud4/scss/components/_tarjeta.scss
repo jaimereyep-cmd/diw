@@ -1,0 +1,59 @@
+// _tarjeta.scss — ✍️ TU TURNO 3 · la tarjeta, que se adapta a SU CAJA (container query).
+//
+// La misma .tarjeta aparece en dos sitios: en .destacado (ancho) y en .catalogo (estrecho).
+//
+//   3a · Por defecto (estrecha): imagen arriba, cuerpo debajo → Flexbox en columna.
+//        En el cuerpo, el botón siempre al fondo de la tarjeta, aunque el texto sea corto
+//        (todas las tarjetas de una fila acaban con el botón a la misma altura).
+//        Pista: el cuerpo también es flex en columna y crece (flex: 1); el botón, margin-top: auto
+//
+//   3b · Cuando la CAJA donde está la tarjeta mide 32rem o más: imagen a la izquierda
+//        (40 % del ancho) y cuerpo a la derecha → la tarjeta pasa a fila.
+//        Dos pasos (apartado 9 de la UD4):
+//          1. Al CONTENEDOR (.destacado), container-type: inline-size
+//          2. Aquí, @container (min-width: 32rem) { … }
+//        ⚠️ El contenedor no puede ser la propia tarjeta: es su padre.
+//
+// Comprueba: las del catálogo, siempre en columna. La destacada cambia según el sitio que le
+//            deja la página: ensancha de 500 a 900 px despacio y mira qué pasa a 600 px. ¿Por qué?
+@use '../tokens' as *;
+
+.tarjeta {
+  overflow: hidden;
+  border-radius: $radius-md;
+  background: $color-surface;
+  // ✍️ 3a aquí
+}
+
+.tarjeta__cuerpo {
+  padding: $space-md;
+  // ✍️ 3a aquí
+}
+
+.tarjeta__titulo {
+  margin: 0 0 $space-sm;
+  font-size: 1.125rem;
+}
+
+.tarjeta__texto {
+  margin: 0 0 $space-sm;
+}
+
+.tarjeta__precio {
+  margin: 0 0 $space-md;
+  font-weight: 700;
+  color: $color-brand-strong;
+}
+
+.tarjeta__boton {
+  padding: $space-sm $space-md;
+  border: 0;
+  border-radius: $radius-md;
+  font: inherit;
+  color: $white;
+  background: $color-brand-primary;
+  cursor: pointer;
+  // ✍️ 3a aquí
+}
+
+// ✍️ 3b aquí: el contenedor y la container query

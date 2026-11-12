@@ -1,0 +1,17 @@
+// _catalogo.scss — ✍️ TU TURNO 2 · la rejilla de productos.
+//
+// Las tarjetas se colocan en tantas columnas como quepan, cada una de 16rem como mínimo,
+// y estirándose para llenar la fila. En un móvil, una; en una pantalla grande, tres o cuatro.
+//
+// ⚠️ SIN media queries en este fichero: lo resuelve Grid él solito.
+//
+// Pistas:
+//   - grid-template-columns: repeat(auto-fit, minmax(MÍNIMO, 1fr))
+//   - el hueco entre tarjetas con gap y un token de espaciado
+//   - ¿y si la pantalla mide menos de 16rem (un móvil de 240px)? min(16rem, 100%) en vez de 16rem
+@use '../tokens' as *;
+
+.catalogo {
+  margin-top: $space-xl;
+  // ✍️ aquí
+}

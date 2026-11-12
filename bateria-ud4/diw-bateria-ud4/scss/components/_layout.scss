@@ -1,0 +1,54 @@
+// _layout.scss — ✍️ TU TURNO 1 · el esqueleto de la página con Grid.
+//
+// Los 4 hijos de .pagina son: .cabecera · .principal · .filtros · .pie
+//
+//   Móvil (sin media query): UNA columna, en este orden:
+//       cabecera / filtros / principal / pie
+//   Desde $bp-md: DOS columnas. Los filtros a la izquierda (15rem) y el principal a la derecha:
+//       "cabecera cabecera"
+//       "filtros  principal"
+//       "pie      pie"
+//
+// Pistas:
+//   - display: grid + grid-template-areas en .pagina (y otra vez dentro de @include desde(...))
+//   - grid-template-columns solo hace falta en la versión de dos columnas
+//   - CADA hijo necesita su grid-area (si falta uno, se coloca en el primer hueco libre)
+//   - el HTML no se toca: el orden lo decide el mapa, no el HTML
+@use '../tokens' as *;
+@use '../mixins' as *;
+
+.pagina {
+  min-height: 100dvh;
+  // ✍️ aquí
+}
+
+// ✍️ y aquí, la grid-area de cada hijo
+
+.principal {
+  padding: $space-md;
+}
+
+// ✍️ TU TURNO 4 · el segundo breakpoint y la tipografía fluida
+//
+//   4a · Desde $bp-lg: la página no pasa de 75rem de ancho y se centra en la pantalla,
+//        y los filtros pasan a medir 18rem. Pista: max-width + margin-inline: auto
+//   4b · El título .principal__titulo crece con la pantalla SIN media queries:
+//        mínimo 1.5rem, máximo 2.75rem, y en medio 1rem + 3vw. Pista: clamp(MÍN, IDEAL, MÁX)
+
+.filtros {
+  padding: $space-md;
+  background: $color-surface;
+}
+
+.filtros__lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pie {
+  padding: $space-md;
+  text-align: center;
+  color: $white;
+  background: $color-text;
+}

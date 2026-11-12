@@ -1,0 +1,14 @@
+# compose.yaml · el entorno de trabajo (Node, npm, Vite y Sass viven aquí dentro)
+services:
+  web:
+    image: node:22-alpine     # imagen oficial de Node.js 22
+    user: "${UID_GID:-1000:1000}"   # TU usuario del ordenador (lo pone bateria.sh): los ficheros serán tuyos
+    working_dir: /app
+    environment:
+      - HOME=/tmp             # npm guarda su caché dentro del contenedor, no en tu carpeta
+      - npm_config_update_notifier=false   # sin avisos de «actualiza npm»
+    volumes:
+      - .:/app                # tu carpeta del proyecto, dentro del contenedor
+    ports:
+      - "5173:5173"           # http://localhost:5173 → Vite
+    command: npx vite --host 0.0.0.0

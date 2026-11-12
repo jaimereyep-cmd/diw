@@ -1,0 +1,22 @@
+// _base.scss — 👀 ya está hecho
+@use 'tokens' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;   // paso 1 de cualquier proyecto (apartado 4 de la UD4)
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  color: $color-text;
+  background: $color-surface-alt;
+}
+
+img {
+  display: block;
+  max-width: 100%;          // ninguna imagen más ancha que su caja
+  height: auto;
+}

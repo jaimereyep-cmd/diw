@@ -1,0 +1,14 @@
+{
+  "name": "diw-bateria-ud4",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DIW · Batería de la UD4 (opcional): el catálogo de RAÍZ, layout responsive",
+  "scripts": {
+    "comprobar": "node comprobador/comprobar.mjs"
+  },
+  "devDependencies": {
+    "sass": "^1.105.1",
+    "vite": "^8.3.4"
+  }
+}

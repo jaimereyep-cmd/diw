@@ -1,0 +1,20 @@
+// _tokens.scss — los tokens de RAÍZ (en SASS). Los colores SOLO se escriben aquí.
+$green-500: #2E7D32;              // Nivel 1 · Global
+$green-800: #1B4D20;
+$green-50: #EDF5EA;
+$gray-900: #1A1A1A;
+$gray-100: #F6F4EF;
+$white: #FFFFFF;
+
+$color-brand-primary: $green-500; // Nivel 2 · Semántico
+$color-brand-strong: $green-800;
+$color-surface: $white;
+$color-surface-alt: $gray-100;
+$color-text: $gray-900;
+
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 40px;
+$radius-md: 8px;

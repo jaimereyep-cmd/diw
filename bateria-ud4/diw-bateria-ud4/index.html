@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RAÍZ · Vivero online</title>
+  <link rel="stylesheet" href="/scss/main.scss">
+</head>
+<!-- ⚠️ Este HTML NO se toca. Todo el calentamiento es CSS (en scss/). -->
+<body>
+  <div class="pagina">
+
+    <header class="cabecera">
+      <a class="cabecera__logo" href="#">RAÍZ</a>
+      <nav class="cabecera__nav" aria-label="Principal">
+        <a href="#">Interior</a>
+        <a href="#">Exterior</a>
+        <a href="#">Macetas</a>
+        <a href="#">Ofertas</a>
+      </nav>
+    </header>
+
+    <main class="principal">
+      <h1 class="principal__titulo">Plantas que llegan vivas a tu casa</h1>
+
+      <section class="destacado" aria-label="Producto destacado">
+        <article class="tarjeta">
+          <img class="tarjeta__imagen" src="/img/producto.svg" alt="Monstera deliciosa en maceta de barro" width="400" height="300">
+          <div class="tarjeta__cuerpo">
+            <h2 class="tarjeta__titulo">Monstera deliciosa</h2>
+            <p class="tarjeta__texto">De interior, con luz indirecta. Te la mandamos en caja ventilada y con guía de riego para los primeros 30 días.</p>
+            <p class="tarjeta__precio">34,90 €</p>
+            <button class="tarjeta__boton" type="button">Añadir al carrito</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="catalogo" aria-label="Catálogo">
+        <article class="tarjeta">
+          <img class="tarjeta__imagen" src="/img/producto.svg" alt="Pothos colgante" width="400" height="300">
+          <div class="tarjeta__cuerpo">
+            <h2 class="tarjeta__titulo">Pothos</h2>
+            <p class="tarjeta__texto">Casi indestructible.</p>
+            <p class="tarjeta__precio">12,50 €</p>
+            <button class="tarjeta__boton" type="button">Añadir al carrito</button>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <img class="tarjeta__imagen" src="/img/producto.svg" alt="Olivo joven en maceta" width="400" height="300">
+          <div class="tarjeta__cuerpo">
+            <h2 class="tarjeta__titulo">Olivo</h2>
+            <p class="tarjeta__texto">Para terraza o patio: aguanta el sol de agosto, el viento de levante y algún olvido de riego.</p>
+            <p class="tarjeta__precio">29,00 €</p>
+            <button class="tarjeta__boton" type="button">Añadir al carrito</button>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <img class="tarjeta__imagen" src="/img/producto.svg" alt="Cactus variados en macetas pequeñas" width="400" height="300">
+          <div class="tarjeta__cuerpo">
+            <h2 class="tarjeta__titulo">Pack de cactus</h2>
+            <p class="tarjeta__texto">Tres macetas.</p>
+            <p class="tarjeta__precio">15,90 €</p>
+            <button class="tarjeta__boton" type="button">Añadir al carrito</button>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <img class="tarjeta__imagen" src="/img/producto.svg" alt="Maceta de barro de 20 cm" width="400" height="300">
+          <div class="tarjeta__cuerpo">
+            <h2 class="tarjeta__titulo">Maceta de barro</h2>
+            <p class="tarjeta__texto">Hecha a mano.</p>
+            <p class="tarjeta__precio">9,90 €</p>
+            <button class="tarjeta__boton" type="button">Añadir al carrito</button>
+          </div>
+        </article>
+        <article class="tarjeta">
+          <img class="tarjeta__imagen" src="/img/producto.svg" alt="Saco de sustrato universal" width="400" height="300">
+          <div class="tarjeta__cuerpo">
+            <h2 class="tarjeta__titulo">Sustrato universal con fibra de coco para plantas de interior y exterior</h2>
+            <p class="tarjeta__texto">Saco de 10 litros.</p>
+            <p class="tarjeta__precio">6,50 €</p>
+            <button class="tarjeta__boton" type="button">Añadir al carrito</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <aside class="filtros" aria-label="Filtros">
+      <h2 class="filtros__titulo">Filtrar</h2>
+      <ul class="filtros__lista">
+        <li><label><input type="checkbox"> Poca luz</label></li>
+        <li><label><input type="checkbox"> Aptas para mascotas</label></li>
+        <li><label><input type="checkbox"> Riego escaso</label></li>
+        <li><label><input type="checkbox"> Menos de 15 €</label></li>
+      </ul>
+    </aside>
+
+    <footer class="pie">
+      <p>© 2026 RAÍZ · Vivero online · Envío gratis desde 40 €</p>
+    </footer>
+
+  </div>
+</body>
+</html>
